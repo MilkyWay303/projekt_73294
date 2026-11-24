@@ -4,7 +4,7 @@ using System.Text;
 
 namespace projekt_73294.Models
 {
-    internal class Film : MediaItem
+    class Film : MediaItem
     {
         public string Rezyser { get; private set; }
 
