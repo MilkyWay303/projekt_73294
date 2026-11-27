@@ -30,5 +30,10 @@ namespace projekt_73294.Models
                 return true;
             }
         }
+
+        public IReadOnlyList<MediaItem> Znajdz_Po_Tytule(string tytul)
+        {
+            return _lista_przedmiotow.Where(szukane => string.Equals(szukane.Tytul, tytul, StringComparison.OrdinalIgnoreCase)).ToList();
+        }
     }
 }
