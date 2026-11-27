@@ -16,5 +16,19 @@ namespace projekt_73294.Models
             }
         }
 
+        public bool Dodaj_Przedmiot(MediaItem przedmiot)
+        {
+            bool Czy_Duplikat = _lista_przedmiotow.Any(element => element.GetType() == przedmiot.GetType() && element.Tytul == przedmiot.Tytul && element.Data_Wydania == przedmiot.Data_Wydania && element.Rodzaj == przedmiot.Rodzaj);
+            
+            if (Czy_Duplikat)
+            {
+                return false;
+            }
+            else
+            {
+                _lista_przedmiotow.Add(przedmiot);
+                return true;
+            }
+        }
     }
 }
